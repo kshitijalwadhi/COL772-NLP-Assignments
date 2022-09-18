@@ -1,0 +1,8 @@
+10% data
+MNB + bigram = 0.7283033620015638
+MNB + bigram (professor vs non-professor) = 0.8549648162627053
+LR + bigram (professor vs non-professor) = 0.9026583268178264
+
+
+MNB + bigram = 0.6593298636337643 (with normal upsampling)
+MNB + bigram = 0.6620866482536987 (with augmentation)
