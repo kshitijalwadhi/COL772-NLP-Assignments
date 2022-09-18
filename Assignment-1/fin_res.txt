@@ -1,0 +1,17 @@
+Full data
+
+Without augment:
+Micro F1:  0.7409956591451254
+Macro F1:  0.6844195740263654
+Average F1:  0.7127076165857454
+
+With augment:
+
+
+Without upsampling
+
+Without aug:
+Micro F1:  0.8122482499706698
+Macro F1:  0.7429325386678566
+Average F1:  0.7775903943192632
+
