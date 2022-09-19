@@ -5,7 +5,6 @@ import nltk
 import re
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk import tokenize
-from tqdm import tqdm
 from sklearn.svm import LinearSVC
 import sys
 import pickle
@@ -22,7 +21,7 @@ def check_deps():
 def clean_data(df):
     profiles = df["profile"]
     cleaned_profiles = []
-    for profile in tqdm(profiles):
+    for profile in profiles:
         profile = re.sub(r"[^a-zA-Z .]", " ", profile)
         profile = profile.lower()
         profile = profile.split()

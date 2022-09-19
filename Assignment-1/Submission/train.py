@@ -5,7 +5,6 @@ import nltk
 import re
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk import tokenize
-from tqdm import tqdm
 from sklearn.svm import LinearSVC
 import sys
 import pickle
@@ -47,7 +46,7 @@ def augment_data(df, profession, target_num):
 def clean_data(df):
     profiles = df["profile"]
     cleaned_profiles = []
-    for profile in tqdm(profiles):
+    for profile in profiles:
         profile = re.sub(r"[^a-zA-Z .]", " ", profile)
         profile = profile.lower()
         profile = profile.split()
@@ -88,7 +87,7 @@ if __name__ == "__main__":
     AUGMENT_DATA = True
     if AUGMENT_DATA:
         max_num = int(max(df["profession"].value_counts()) / 12)
-        for profession in tqdm(professions):
+        for profession in professions:
             train_data = augment_data(df, profession, max_num)
 
     train_data = df
