@@ -104,5 +104,5 @@ if __name__ == "__main__":
 
     model = LinearSVC(C=0.45, penalty="l2", dual=False, max_iter=10000, random_state=42).fit(X_train_vec, y_train)
 
-    with open("2019EE10577.pkl", "wb") as f:
+    with open("2019EE10577.model", "wb") as f:
         pickle.dump((vectorizer, model), f)

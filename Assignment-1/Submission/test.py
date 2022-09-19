@@ -57,11 +57,14 @@ if __name__ == "__main__":
     df = clean_data(df)
     df = remove_punctuation(df, "profile")
 
-    with open("2019EE10577.pkl", "rb") as f:
+    with open("2019EE10577.model", "rb") as f:
         vectorizer, modelSVC = pickle.load(f)
 
     X_test = get_X(df)
     y_pred = modelSVC.predict(X_test)
 
-    y_pred_df = pd.DataFrame({"profession": y_pred})
-    y_pred_df.to_csv(OUTPUT_FILE_NAME, index=False)
+    with open(OUTPUT_FILE_NAME, "w") as f:
+        f.write('"' + "profession" + '"' + "\n")
+        for pred in y_pred:
+            new_pred = '"' + pred + '"'
+            f.write(new_pred + "\n")
