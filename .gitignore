@@ -131,3 +131,4 @@ dmypy.json
 *.zip
 *.vscode
 *.DS_Store
+glove.6B/
