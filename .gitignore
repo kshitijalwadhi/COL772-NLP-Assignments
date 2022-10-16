@@ -132,3 +132,4 @@ dmypy.json
 *.vscode
 *.DS_Store
 glove.6B/
+W2V/
